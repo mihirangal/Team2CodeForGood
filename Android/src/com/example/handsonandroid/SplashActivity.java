@@ -23,6 +23,7 @@ public class SplashActivity extends Activity {
 		new Handler().postDelayed(new Runnable(){
 			
 			/*Show the splash screen
+			 * sample commit
 			 * 
 			 */
 			

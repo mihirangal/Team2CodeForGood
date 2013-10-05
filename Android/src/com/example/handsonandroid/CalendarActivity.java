@@ -10,6 +10,7 @@ import com.example.handsonandroid.custom_calendar.CalendarAdapter;
 import com.example.handsonandroid.custom_calendar.CalendarUtility;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -20,6 +21,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -123,6 +125,7 @@ public class CalendarActivity extends Activity {
 		   setNextMonth();
 		   refreshCalendar();
 	   }
+	   v.setBackgroundResource(R.drawable.calendar_cell);
 	   ((CalendarAdapter) parent.getAdapter()).setSelected(v);
 
 	   for (int i = 0; i < CalendarUtility.startDates.size(); i++) {
@@ -134,6 +137,33 @@ public class CalendarActivity extends Activity {
 	   if (desc.size() > 0) {
 		   for (int i = 0; i < desc.size(); i++) {
 			   TextView rowTextView = new TextView(CalendarActivity.this);
+			   rowTextView.setTextSize(16f);
+			   rowTextView.setClickable(true);
+			   rowTextView.setOnClickListener(new OnClickListener(){
+
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					TextView view = (TextView) v;
+					String title = view.getText().toString().substring(6, view.getText().toString().length());
+					
+					
+					Events event = Events.findByName(title);
+					
+					boolean queryEventName = true;
+					if(event == null)queryEventName = false;
+					
+					if(queryEventName){
+						Intent i = new Intent(CalendarActivity.this, EventActivity.class);
+						i.putExtra("Event", event);
+					}else{
+						//Do nothing
+					}
+				}
+				  
+				   
+				   
+			   });
 
 			   // set some properties of rowTextView or something
 			   rowTextView.setText("Event:" + desc.get(i));

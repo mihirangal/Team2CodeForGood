@@ -24,13 +24,6 @@ public class FeedActivity extends Activity {
 
 	ArrayList<Events> events;
 	User user;
-	
-	//private ListView lv1 = null;
-	private ListView lv2 = null;
-	private ListView lv3 = null;
-	private String s1[] = { "a", "b", "c", "d", "e", "f" };
-	private String s2[] = { "r", "s", "t", "u", "v", "w", "x" };
-	private String s3[] = { "r", "s", "f", "u", "c", "k", "x" };
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -84,8 +77,11 @@ public class FeedActivity extends Activity {
 
 				Toast toast = Toast.makeText(context, text, duration);
 				toast.show();
+				
+				
 				Intent i = new Intent(FeedActivity.this,EventActivity.class);
-				i.putExtra("new_variable_name","12312411414");
+				Events temp = Events.findByName(text.toString());
+				i.putExtra("Event",temp);
 				startActivity(i);
 				
 			}
@@ -123,6 +119,11 @@ public class FeedActivity extends Activity {
 
 				Toast toast = Toast.makeText(context, text, duration);
 				toast.show();
+				
+				Intent i = new Intent(FeedActivity.this,EventActivity.class);
+				Events temp = Events.findByName(text.toString());
+				i.putExtra("Event",temp);
+				startActivity(i);
 			}
 		});
 	}
@@ -158,6 +159,11 @@ public class FeedActivity extends Activity {
 
 				Toast toast = Toast.makeText(context, text, duration);
 				toast.show();
+				
+				Intent i = new Intent(FeedActivity.this,EventActivity.class);
+				Events temp = Events.findByName(text.toString());
+				i.putExtra("Event",temp);
+				startActivity(i);
 			}
 		});
 	}
@@ -193,6 +199,11 @@ public class FeedActivity extends Activity {
 
 				Toast toast = Toast.makeText(context, text, duration);
 				toast.show();
+				
+				Intent i = new Intent(FeedActivity.this,EventActivity.class);
+				Events temp = Events.findByName(text.toString());
+				i.putExtra("Event",temp);
+				startActivity(i);
 			}
 		});
 	}
@@ -228,6 +239,11 @@ public class FeedActivity extends Activity {
 
 				Toast toast = Toast.makeText(context, text, duration);
 				toast.show();
+				
+				Intent i = new Intent(FeedActivity.this,EventActivity.class);
+				Events temp = Events.findByName(text.toString());
+				i.putExtra("Event",temp);
+				startActivity(i);
 			}
 		});
 	}
@@ -263,6 +279,11 @@ public class FeedActivity extends Activity {
 
 				Toast toast = Toast.makeText(context, text, duration);
 				toast.show();
+				
+				Intent i = new Intent(FeedActivity.this,EventActivity.class);
+				Events temp = Events.findByName(text.toString());
+				i.putExtra("Event",temp);
+				startActivity(i);
 			}
 		});
 	}
@@ -298,6 +319,11 @@ public class FeedActivity extends Activity {
 
 				Toast toast = Toast.makeText(context, text, duration);
 				toast.show();
+				
+				Intent i = new Intent(FeedActivity.this,EventActivity.class);
+				Events temp = Events.findByName(text.toString());
+				i.putExtra("Event",temp);
+				startActivity(i);
 			}
 		});
 	}

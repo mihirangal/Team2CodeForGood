@@ -9,7 +9,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 
-
+/**
+ * 
+ * @author Garrett
+ * 
+ * This activity is the feed for the app, all the events.
+ */
 public class FeedActivity extends Activity {
 
 	ArrayList<Events> events;

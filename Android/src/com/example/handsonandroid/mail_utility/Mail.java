@@ -161,4 +161,8 @@ public class Mail extends javax.mail.Authenticator {
 
 	    return props;
 	}
+	
+	public void setBody(String msg){
+		this.body = msg;
+	}
 }

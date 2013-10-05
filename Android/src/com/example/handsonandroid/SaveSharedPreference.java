@@ -1,3 +1,4 @@
+package com.example.handsonandroid;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;

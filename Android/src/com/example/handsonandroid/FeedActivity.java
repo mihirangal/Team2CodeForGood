@@ -30,5 +30,15 @@ public class FeedActivity extends Activity {
 	public void onStart(){
 		super.onStart();
 	}
+	
+	@Override
+	public void onPause(){
+		super.onPause();
+	}
+	
+	@Override
+	public void onStop(){
+		super.onStop();
+	}
 
 }

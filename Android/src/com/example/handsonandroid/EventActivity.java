@@ -9,9 +9,9 @@ public class EventActivity extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_event);
 		Bundle extras = getIntent().getExtras();
-		String value="";
+		Events event = null;
 		if (extras != null) {
-		    value = extras.getString("new_variable_name");
+		    event = (Events) extras.get("Event");
 		}
 		
 	}

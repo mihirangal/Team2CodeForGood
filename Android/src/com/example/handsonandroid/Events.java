@@ -1,5 +1,6 @@
 package com.example.handsonandroid;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -9,7 +10,7 @@ import java.util.ArrayList;
  * Class that will hold be used to create all individual events,
  * as well as storing all events in a static ArrayList<Events>
  */
-public class Events {
+public class Events implements Serializable {
 
 	//All member variables required in the spreadsheet document
 	private String occurenceID;
@@ -321,6 +322,17 @@ public class Events {
 		Events.curEvents = curEvents;
 	}
 	
-	
+	public static Events findByName(String name){
+		
+		ArrayList<Events> eventList = Events.getList();
+		
+		for(int i = 0; i < Events.curEvents.size(); i++){
+			if(name.equals(eventList.get(i).opportunityName)){
+				return eventList.get(i);
+			}
+		}
+		
+		return null;
+	}
 	
 }

@@ -39,30 +39,30 @@ public class CalendarActivity extends Activity {
  ArrayList desc;
 
  public void onCreate(Bundle savedInstanceState) {
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.activity_calendar);
-  Locale.setDefault(Locale.US);
-
-  rLayout = (LinearLayout) findViewById(R.id.text);
-  month = (GregorianCalendar) GregorianCalendar.getInstance();
-  itemmonth = (GregorianCalendar) month.clone();
-
-  items = new ArrayList();
-
-  adapter = new CalendarAdapter(this, month);
-
-  GridView gridview = (GridView) findViewById(R.id.gridview);
-  gridview.setAdapter(adapter);
-
-  handler = new Handler();
-  handler.post(calendarUpdater);
-
-  TextView title = (TextView) findViewById(R.id.title);
-  title.setText(android.text.format.DateFormat.format("MMMM yyyy", month));
-
-  RelativeLayout previous = (RelativeLayout) findViewById(R.id.previous);
-
-  previous.setOnClickListener(new OnClickListener() {
+	  super.onCreate(savedInstanceState);
+	  setContentView(R.layout.activity_calendar);
+	  Locale.setDefault(Locale.US);
+	
+	  rLayout = (LinearLayout) findViewById(R.id.text);
+	  month = (GregorianCalendar) GregorianCalendar.getInstance();
+	  itemmonth = (GregorianCalendar) month.clone();
+	
+	  items = new ArrayList();
+	
+	  adapter = new CalendarAdapter(this, month);
+	
+	  GridView gridview = (GridView) findViewById(R.id.gridview);
+	  gridview.setAdapter(adapter);
+	
+	  handler = new Handler();
+	  handler.post(calendarUpdater);
+	
+	  TextView title = (TextView) findViewById(R.id.title);
+	  title.setText(android.text.format.DateFormat.format("MMMM yyyy", month));
+	
+	  RelativeLayout previous = (RelativeLayout) findViewById(R.id.previous);
+	
+	  previous.setOnClickListener(new OnClickListener() {
 
    @Override
    public void onClick(View v) {

@@ -26,7 +26,7 @@ public class HomeActivity extends Activity
 	
 	public void event(View v)
 	{
-		Intent i = new Intent(HomeActivity.this, FeedActivity.class);
+		Intent i = new Intent(HomeActivity.this, EventPageActivity.class);
 		startActivity(i);
 	}
 	public void cal(View v)

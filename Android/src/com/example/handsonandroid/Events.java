@@ -1,5 +1,7 @@
 package com.example.handsonandroid;
 
+import java.util.ArrayList;
+
 public class Events {
 
 	private String occurenceID;
@@ -32,13 +34,29 @@ public class Events {
 	private String zipCode;
 	
 	
-	
+	private static ArrayList<Events> curEvents = new ArrayList<Events>();
 	
 	
 	
 	
 	public Events(){
 		
+	}
+	
+	public static void clearList(){
+		curEvents = new ArrayList<Events>();
+	}
+	
+	public static void addToList(Events e){
+		curEvents.add(e);
+	}
+	
+	public static void removeFromList(Events e){
+		curEvents.remove(e);
+	}
+	
+	public static ArrayList<Events> getList(Events e){
+		return curEvents;
 	}
 	
 }

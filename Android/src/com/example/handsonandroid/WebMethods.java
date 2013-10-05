@@ -31,7 +31,6 @@ public class WebMethods {
 	 */
 	public static boolean login(String userName, String password){
 		
-		//Create the new user, User user = new User(); user.setUser(this);
 		return false;
 	}
 	

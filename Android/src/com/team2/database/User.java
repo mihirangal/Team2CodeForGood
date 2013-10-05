@@ -1,6 +1,13 @@
 package com.team2.database;
 
-
+/**
+ * This class is a small model of the data pulled from the database (the user
+ * table). New User records are added to the database when a user signs up for
+ * the service.
+ * 
+ * @author Ethan Hill
+ * 
+ */
 public class User {
 
 	/**
@@ -17,8 +24,8 @@ public class User {
 	private String address2;
 	private String phone;
 	private String email;
-	
-	//static instance to pass the object around the application
+
+	// static instance to pass the object around the application
 	private static User mUser = new User();;
 
 	// UserDAO initializes with setters, not constructor
@@ -66,18 +73,18 @@ public class User {
 	public String getEmail() {
 		return this.email;
 	}
-	
-	public static User getStaticUser(){
+
+	public static User getStaticUser() {
 		return User.mUser;
 	}
 
 	/*
 	 * Setters
 	 */
-	public static void setStaticUser(User user){
+	public static void setStaticUser(User user) {
 		User.mUser = user;
 	}
-	
+
 	public void setId(String id) {
 		this.id = id;
 	}

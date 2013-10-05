@@ -2,6 +2,13 @@ package com.team2.database;
 
 import java.util.ArrayList;
 
+/**
+ * This class is intended to serve as a model for the data pulled from the
+ * database (event table) in order to interact with the user interface.
+ * 
+ * @author Ethan Hill
+ * 
+ */
 public class Event {
 
 	private String eventID;
@@ -39,9 +46,12 @@ public class Event {
 	 */
 	private static ArrayList<Event> curEvents = new ArrayList<Event>();
 
-	// Do nothing when this is constructed, the setters will initialize the
-	// fields
+	/**
+	 * Default Constructor
+	 */
 	public Event() {
+		// Do nothing when this is constructed, the setters will initialize the
+		// fields
 	}
 
 	// The list methods
@@ -62,8 +72,8 @@ public class Event {
 
 	}
 
-	/*
-	 * Getters and Setters...
+	/**
+	 * Getters and Setters below
 	 */
 	public String getEventID() {
 		return this.eventID;

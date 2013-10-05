@@ -22,9 +22,10 @@ public class FeedActivity extends Activity {
 		
 		ListView lv = (ListView) findViewById(R.id.event_feed);
 		
-		String[] lv_array = (String[]) Events.getList().toArray();
-		lv.setAdapter(new ArrayAdapter<String>(FeedActivity.this, android.R.layout.simple_list_item_1,
-		lv_array));
+		//Comment out temporarily
+		//String[] lv_array = (String[]) Events.getList().toArray();
+		//lv.setAdapter(new ArrayAdapter<String>(FeedActivity.this, android.R.layout.simple_list_item_1,
+		//lv_array));
 		
 	}
 

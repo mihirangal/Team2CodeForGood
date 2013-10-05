@@ -99,12 +99,20 @@ public class WebMethods {
 		Date date = new Date(1994, 05, 27);
 		int beginTime = 000;
 		int endTime = 000;
+		String firstName = "Default";
 		
+		String eventCoordinatorEmail = "test@test.com";
 		String userEmail = "test@test.com";
 		
 		Mail mailSender = new Mail();
 		mailSender.setTo(new String[] { userEmail });
-		mailSender.setBody("Welcome User! Thanks for Registering with HandsOn Android!");
+		mailSender.setBody("Welcome User! Thanks for Registering for the event " + title + "! The date is " + date.toString() + 
+				" from " + beginTime + " to " + endTime);
+		mailSender.sendMail();
+		
+		mailSender = new Mail();
+		mailSender.setTo(new String[] { eventCoordinatorEmail} );
+		mailSender.setBody("The user " + firstName + " has signed up for the event " + title + "!" + " Their Email is " + userEmail);
 		mailSender.sendMail();
 		
 		//Unimplemented

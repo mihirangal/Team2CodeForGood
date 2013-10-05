@@ -3,8 +3,10 @@ package com.example.handsonandroid;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
 
-public class RegisterActivity extends Activity {
+public class RegisterActivity extends Activity implements OnClickListener {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -18,5 +20,20 @@ public class RegisterActivity extends Activity {
 		getMenuInflater().inflate(R.menu.register, menu);
 		return true;
 	}
+
+	@Override
+	public void onClick(View v) {
+		switch(v.getId()){
+		case R.id.registerButton:
+			break;
+		}
+		
+	}
+	
+	@Override
+	public void onStart(){
+		this.findViewById(R.id.registerButton).setOnClickListener(this);
+	}
+	
 
 }

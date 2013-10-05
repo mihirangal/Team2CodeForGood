@@ -327,7 +327,7 @@ public class Events implements Serializable {
 		ArrayList<Events> eventList = Events.getList();
 		
 		for(int i = 0; i < Events.curEvents.size(); i++){
-			if(name.equals(eventList.get(i).opportunityName)){
+			if(name.equals(eventList.get(i).getOpportunityName())){
 				return eventList.get(i);
 			}
 		}

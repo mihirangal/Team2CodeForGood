@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:textColor="#0000D7"
         android:textSize="14dip"
-        android:background="@drawable/calendar_cel_selectl"
         android:textStyle="bold" >
     </TextView>
 

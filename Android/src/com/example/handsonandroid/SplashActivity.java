@@ -14,7 +14,9 @@ public class SplashActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		getActionBar().hide();
 		setContentView(R.layout.activity_splash);
+		
 		
 		//Use a timer to keep the splash screen up long enough to show my logo.
 		

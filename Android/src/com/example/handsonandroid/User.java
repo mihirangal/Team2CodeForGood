@@ -12,8 +12,17 @@ public class User {
 	private String phone;
 	private String email;
 	
+	private static User user;
+	
 	public User(){
 		
+	}
+	
+	public User(String userName, String password, String firstName){
+		this.userName = userName;
+		this.firstName = firstName;
+		//Login function below
+		//WebMethods.login();
 	}
 	
 }

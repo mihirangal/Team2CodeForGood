@@ -12,11 +12,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
+<<<<<<< HEAD
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+=======
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+>>>>>>> ff0cad9a8b98dc5517ac9652015f7813e46da0a0
 
 
 
@@ -35,6 +40,7 @@ public class FeedActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_feed);
+<<<<<<< HEAD
 
 	    // DatabaseHandler db = new DatabaseHandler(this);
          
@@ -160,6 +166,15 @@ public class FeedActivity extends Activity {
 				toast.show();
 			}
 		});
+=======
+		
+		ListView lv = (ListView) findViewById(R.id.event_feed);
+		
+		String[] lv_array = (String[]) Events.getList().toArray();
+		lv.setAdapter(new ArrayAdapter<String>(FeedActivity.this, android.R.layout.simple_list_item_1,
+		lv_array));
+		
+>>>>>>> ff0cad9a8b98dc5517ac9652015f7813e46da0a0
 	}
 	public void t3(View v)
 	{

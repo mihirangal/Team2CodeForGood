@@ -11,8 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
-        android:orientation="vertical"
-        tools:context=".MainActivity" >
+        android:orientation="vertical" >
 
         <TextView
             android:id="@+id/registerText"
@@ -20,17 +19,17 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:text="Register"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge" >
+
+          <requestFocus android:layout_height="match_parent" />
+        </TextView>
 
         <EditText
             android:id="@+id/username"
             android:layout_width="282dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="@string/user_name" >
-
-            <requestFocus android:layout_height="match_parent" />
-        </EditText>
+            android:hint="@string/user_name" />
 
         <EditText
             android:id="@+id/password"

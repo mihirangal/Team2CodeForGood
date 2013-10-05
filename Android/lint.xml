@@ -3,6 +3,9 @@
     <issue id="ButtonStyle">
         <ignore path="res/layout/activity_event.xml" />
     </issue>
+    <issue id="ContentDescription">
+        <ignore path="res/layout/activity_splash.xml" />
+    </issue>
     <issue id="HardcodedText">
         <ignore path="res/layout/activity_calendar.xml" />
         <ignore path="res/layout/activity_event.xml" />

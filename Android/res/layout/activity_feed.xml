@@ -1,23 +1,12 @@
-<<<<<<< HEAD:Android/res/layout/activity_main.xml
 <?xml version="1.0" encoding="utf-8"?>
-=======
->>>>>>> b770ad4be50250596243308cb207d71156823438:Android/res/layout/activity_feed.xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-<<<<<<< HEAD:Android/res/layout/activity_main.xml
     android:layout_gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity" >
     
-    </LinearLayout>
-=======
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".FeedActivity" >
 
     <ListView
         android:id="@+id/event_feed"
@@ -27,4 +16,3 @@
          />
 
 </LinearLayout>
->>>>>>> b770ad4be50250596243308cb207d71156823438:Android/res/layout/activity_feed.xml

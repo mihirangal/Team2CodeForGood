@@ -36,6 +36,18 @@ public class WebMethods {
 	public static boolean login(String userName, String password){
 		
 		//Create the new user, User user = new User(); user.setUser(this);
+		
+		//If the login query was succesful, save the preferences
+		String firstName = "Default";
+		String id = "0";
+		boolean success = false;
+		if(success){
+			SaveSharedPreference.setData(ctx, SaveSharedPreference.USER_ID_KEY, id);
+			SaveSharedPreference.setData(ctx, SaveSharedPreference.USER_NAME_KEY, firstName);
+			SaveSharedPreference.setData(ctx, SaveSharedPreference.USER_PASS_KEY, password);
+			SaveSharedPreference.setData(ctx, SaveSharedPreference.USERNAME_KEY, userName);
+			
+		}
 		return false;
 	}
 	

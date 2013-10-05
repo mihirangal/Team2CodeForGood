@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">HandsOn Android</string>
+    <string name="app_name">\tHandsOn</string>
     <string name="action_settings">Settings</string>
+<<<<<<< HEAD
+    <string name="user_name">Username</string>
+    <string name="password">Password</string>
+=======
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_splash">SplashActivity</string>
+>>>>>>> 96d5cca1c3cab5c3cfd3ff25317ebbe407785011
 
 </resources>

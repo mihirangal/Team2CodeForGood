@@ -8,9 +8,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".SplashActivity" >
 
-    <TextView
+    
+    <ImageView 
+        android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_centerInParent="true"
+        android:src="@drawable/hands_on_black"/>
 
 </RelativeLayout>

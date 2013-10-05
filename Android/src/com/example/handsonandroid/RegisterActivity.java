@@ -6,6 +6,12 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+/**
+ * 
+ * @author Garrett
+ *
+ * Registers a new user
+ */
 public class RegisterActivity extends Activity implements OnClickListener {
 
 	@Override

@@ -1,46 +1,33 @@
 package com.example.handsonandroid;
 
 import java.util.ArrayList;
-import java.util.List;
 
-
-
-import android.os.Bundle;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
-import android.view.Menu;
-<<<<<<< HEAD
+import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-=======
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
->>>>>>> ff0cad9a8b98dc5517ac9652015f7813e46da0a0
 
 
-
+/**
+ * 
+ * @author Garrett
+ * 
+ * This activity is the feed for the app, all the events.
+ */
 public class FeedActivity extends Activity {
 
 	ArrayList<Events> events;
 	User user;
-	
-	//private ListView lv1 = null;
-	private ListView lv2 = null;
-	private ListView lv3 = null;
-	private String s1[] = { "a", "b", "c", "d", "e", "f" };
-	private String s2[] = { "r", "s", "t", "u", "v", "w", "x" };
-	private String s3[] = { "r", "s", "f", "u", "c", "k", "x" };
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_feed);
-<<<<<<< HEAD
 
 	    // DatabaseHandler db = new DatabaseHandler(this);
          
@@ -63,8 +50,8 @@ public class FeedActivity extends Activity {
 		ListView lv1 = (ListView) findViewById(R.id.event_feed);
 		
 		ArrayList<String> your_array_list = new ArrayList<String>();
-		your_array_list.add("foo");
-		your_array_list.add("bar");
+		your_array_list.add("Cincinatti Walk for Good");
+		your_array_list.add("JPMorgan and Chase Coding for the Good");
 
 
 		ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
@@ -90,8 +77,11 @@ public class FeedActivity extends Activity {
 
 				Toast toast = Toast.makeText(context, text, duration);
 				toast.show();
+				
+				
 				Intent i = new Intent(FeedActivity.this,EventActivity.class);
-				i.putExtra("new_variable_name","12312411414");
+				Events temp = Events.findByName(text.toString());
+				i.putExtra("Event",temp);
 				startActivity(i);
 				
 			}
@@ -102,8 +92,8 @@ public class FeedActivity extends Activity {
 		ListView lv1 = (ListView) findViewById(R.id.event_feed);
 		
 		ArrayList<String> your_array_list = new ArrayList<String>();
-		your_array_list.add("foo");
-		your_array_list.add("barsss");
+		your_array_list.add("Cincinatti Walk for Good");
+		your_array_list.add("JPMorgan and Chase Coding for the Good");
 
 
 		ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
@@ -129,6 +119,11 @@ public class FeedActivity extends Activity {
 
 				Toast toast = Toast.makeText(context, text, duration);
 				toast.show();
+				
+				Intent i = new Intent(FeedActivity.this,EventActivity.class);
+				Events temp = Events.findByName(text.toString());
+				i.putExtra("Event",temp);
+				startActivity(i);
 			}
 		});
 	}
@@ -137,8 +132,8 @@ public class FeedActivity extends Activity {
 		ListView lv1 = (ListView) findViewById(R.id.event_feed);
 		
 		ArrayList<String> your_array_list = new ArrayList<String>();
-		your_array_list.add("foo");
-		your_array_list.add("barsss");
+		your_array_list.add("Cincinatti Walk for Good");
+		your_array_list.add("JPMorgan and Chase Coding for the Good");
 
 
 		ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
@@ -164,25 +159,21 @@ public class FeedActivity extends Activity {
 
 				Toast toast = Toast.makeText(context, text, duration);
 				toast.show();
+				
+				Intent i = new Intent(FeedActivity.this,EventActivity.class);
+				Events temp = Events.findByName(text.toString());
+				i.putExtra("Event",temp);
+				startActivity(i);
 			}
 		});
-=======
-		
-		ListView lv = (ListView) findViewById(R.id.event_feed);
-		
-		String[] lv_array = (String[]) Events.getList().toArray();
-		lv.setAdapter(new ArrayAdapter<String>(FeedActivity.this, android.R.layout.simple_list_item_1,
-		lv_array));
-		
->>>>>>> ff0cad9a8b98dc5517ac9652015f7813e46da0a0
 	}
 	public void t3(View v)
 	{
 		ListView lv1 = (ListView) findViewById(R.id.event_feed);
 		
 		ArrayList<String> your_array_list = new ArrayList<String>();
-		your_array_list.add("foo");
-		your_array_list.add("barsss");
+		your_array_list.add("Cincinatti Walk for Good");
+		your_array_list.add("JPMorgan and Chase Coding for the Good");
 
 
 		ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
@@ -208,6 +199,11 @@ public class FeedActivity extends Activity {
 
 				Toast toast = Toast.makeText(context, text, duration);
 				toast.show();
+				
+				Intent i = new Intent(FeedActivity.this,EventActivity.class);
+				Events temp = Events.findByName(text.toString());
+				i.putExtra("Event",temp);
+				startActivity(i);
 			}
 		});
 	}
@@ -216,8 +212,8 @@ public class FeedActivity extends Activity {
 		ListView lv1 = (ListView) findViewById(R.id.event_feed);
 		
 		ArrayList<String> your_array_list = new ArrayList<String>();
-		your_array_list.add("foo");
-		your_array_list.add("barsss");
+		your_array_list.add("Cincinatti Walk for Good");
+		your_array_list.add("JPMorgan and Chase Coding for the Good");
 
 
 		ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
@@ -243,6 +239,11 @@ public class FeedActivity extends Activity {
 
 				Toast toast = Toast.makeText(context, text, duration);
 				toast.show();
+				
+				Intent i = new Intent(FeedActivity.this,EventActivity.class);
+				Events temp = Events.findByName(text.toString());
+				i.putExtra("Event",temp);
+				startActivity(i);
 			}
 		});
 	}
@@ -251,8 +252,8 @@ public class FeedActivity extends Activity {
 		ListView lv1 = (ListView) findViewById(R.id.event_feed);
 		
 		ArrayList<String> your_array_list = new ArrayList<String>();
-		your_array_list.add("foo");
-		your_array_list.add("barsss");
+		your_array_list.add("Cincinatti Walk for Good");
+		your_array_list.add("JPMorgan and Chase Coding for the Good");
 
 
 		ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
@@ -278,6 +279,11 @@ public class FeedActivity extends Activity {
 
 				Toast toast = Toast.makeText(context, text, duration);
 				toast.show();
+				
+				Intent i = new Intent(FeedActivity.this,EventActivity.class);
+				Events temp = Events.findByName(text.toString());
+				i.putExtra("Event",temp);
+				startActivity(i);
 			}
 		});
 	}
@@ -286,8 +292,8 @@ public class FeedActivity extends Activity {
 		ListView lv1 = (ListView) findViewById(R.id.event_feed);
 		
 		ArrayList<String> your_array_list = new ArrayList<String>();
-		your_array_list.add("foo");
-		your_array_list.add("barsss");
+		your_array_list.add("Cincinatti Walk for Good");
+		your_array_list.add("JPMorgan and Chase Coding for the Good");
 
 
 		ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
@@ -313,6 +319,11 @@ public class FeedActivity extends Activity {
 
 				Toast toast = Toast.makeText(context, text, duration);
 				toast.show();
+				
+				Intent i = new Intent(FeedActivity.this,EventActivity.class);
+				Events temp = Events.findByName(text.toString());
+				i.putExtra("Event",temp);
+				startActivity(i);
 			}
 		});
 	}

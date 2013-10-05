@@ -3,6 +3,8 @@ package com.example.handsonandroid;
 import java.sql.Date;
 import java.util.ArrayList;
 
+import com.example.handsonandroid.mail_utility.Mail;
+
 import android.content.Context;
 
 /**
@@ -69,6 +71,16 @@ public class WebMethods {
 	 */
 	public static boolean registerUser(){
 		
+		//Insert into table, then create a new user with that data
+		
+		//Using the users email
+		String userEmail = "test@test.com";
+		
+		Mail mailSender = new Mail();
+		mailSender.setTo(new String[] { userEmail });
+		mailSender.setBody("Welcome User! Thanks for Registering with HandsOn Android!");
+		mailSender.sendMail();
+		
 		return false;
 	}
 	
@@ -88,6 +100,14 @@ public class WebMethods {
 		int beginTime = 000;
 		int endTime = 000;
 		
+		String userEmail = "test@test.com";
+		
+		Mail mailSender = new Mail();
+		mailSender.setTo(new String[] { userEmail });
+		mailSender.setBody("Welcome User! Thanks for Registering with HandsOn Android!");
+		mailSender.sendMail();
+		
+		//Unimplemented
 		WebMethods.addEventToCalendar(title, description, location, date, beginTime, endTime);
 		return false;
 	}

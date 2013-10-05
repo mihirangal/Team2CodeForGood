@@ -31,7 +31,7 @@ public class EventActivity extends Activity implements OnClickListener
 		case R.id.shareButton:
 			Intent shareIntent = new Intent(Intent.ACTION_SEND);
       	  	shareIntent.setType("text/plain");
-      	  	shareIntent.putExtra(Intent.EXTRA_TEXT, eventUrl);
+      	  	shareIntent.putExtra(Intent.EXTRA_TEXT, "http://www.volunteercentralohio.org");
       	  	startActivity(Intent.createChooser(shareIntent, "Share"));
 			break;
 		case R.id.expressInterestButton:

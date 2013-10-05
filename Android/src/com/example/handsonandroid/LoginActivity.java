@@ -38,8 +38,8 @@ public class LoginActivity extends Activity implements OnClickListener {
 			startActivity(i);
 			break;
 		case R.id.login_button:
-			EditText userName = (EditText) findViewById(R.id.editText1);
-			EditText userPass = (EditText) findViewById(R.id.editText2);
+			EditText userName = (EditText) findViewById(R.id.userName);
+			EditText userPass = (EditText) findViewById(R.id.password);
 			
 			WebMethods web = new WebMethods(this);
 			WebMethods.login(userName.getText().toString(), userPass.getText().toString());

@@ -31,7 +31,21 @@ public class WebMethods {
 		WebMethods.addEventToCalendar(title, description, location, date, beginTime, endTime);
 	}
 	
+	public static void queryByTag(){
+		
+	}
 	
+	public static void queryByCategory(){
+		
+	}
+	
+	public static void queryByDate(){
+		
+	}
+	
+	public static void queryByZipcode(){
+		
+	}
 	
 	public static void updateFacebook(){
 		
